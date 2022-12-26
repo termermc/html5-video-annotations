@@ -5,12 +5,40 @@
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Player Example</title>
+
+	<style>
+		#player-container {
+			width: 400px;
+			height: 300px;
+		}
+		#player {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
 </head>
 <body>
-	<video id="player" controls src="./2fast2jump.webm"></video>
+	<div id="player-container">
+		<video id="player" controls src="./2fast2jump.webm"></video>
+	</div>
 	<script src="../player.js"></script>
 	<script>
+		const player = document.getElementById('player')
+		const annotationPlayer = new AnnotationPlayer(player)
 
+		function mkBtn() {
+			const btn = document.createElement('button')
+
+			btn.innerText = 'Click me'
+			btn.style.width = '50px'
+			btn.style.height = '50px'
+			btn.style.left = 'calc(50% - 25px)'
+			btn.style.top = 'calc(50% - 25px)'
+
+			return btn
+		}
+
+		annotationPlayer.overlay.appendChild(mkBtn())
 	</script>
 </body>
 </html>
