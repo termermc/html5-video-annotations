@@ -36,7 +36,7 @@ class AnnotationPlayer {
 	/** @type {number} */
 	#resizeInterval
 
-	/* Getters */
+	/* Getters and setters */
 	/**
 	 * The <div> overlay that contains annotation content
 	 * @type {HTMLDivElement}
@@ -132,5 +132,35 @@ class AnnotationPlayer {
 		} else {
 			this.show()
 		}
+	}
+}
+
+/**
+ * Generic annotation structure class to be extended by other classes
+ */
+class Annotation {
+	/* Properties */
+	/** @type {number} */
+	#x
+	/** @type {number} */
+	#y
+	/** @type {number} */
+	#width
+	/** @type {number} */
+	#height
+
+	/**
+	 * Instantiates a new annotation.
+	 * All measurements are in percent of the overlay, not in pixels.
+	 * @param {number} x The x position of the annotation
+	 * @param {number} y The y position of the annotation
+	 * @param {number} width The width of the annotation
+	 * @param {number} height The height of the annotation
+	 */
+	constructor(x, y, width, height) {
+		this.#x = x
+		this.#y = y
+		this.#width = width
+		this.#height = height
 	}
 }
