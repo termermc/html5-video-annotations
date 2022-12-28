@@ -164,3 +164,29 @@ class Annotation {
 		this.#height = height
 	}
 }
+
+/*
+<svg
+  width="50mm"
+  height="50mm"
+  viewBox="0 0 100 100"
+  version="1.1"
+  class="html5-video-annotations-annotation-speech-bubble"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <g>
+    <path
+      style="fill:#ffffd3;fill-opacity:1;stroke:#000000;stroke-width:1"
+      d="m 0.5, 0.5 h 99 V 50 H 30 L 0.5, 99.5 15,50 H 0.5 Z"
+    />
+    <text
+      x="5"
+      y="12"
+      style="font-size:0.5em;fill:#000000;white-space:pre-wrap"
+      class="html5-video-annotations-annotation-speech-bubble-text">line1
+line2</text>
+  </g>
+</svg>
+
+ */
