@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -8,8 +9,9 @@
 
 	<style>
 		#player-container {
-			width: 400px;
-			height: 300px;
+			width: 800px;
+			height: 600px;
+			border: 0.5rem solid red;
 		}
 		#player {
 			width: 100%;
@@ -38,7 +40,18 @@
 			return btn
 		}
 
-		annotationPlayer.overlay.appendChild(mkBtn())
+		/** @type {Annotation[]} */
+		const annotations = []
+
+		for (let i = 0; i < 1000; i++) {
+			annotations.push(
+					new SpeechBubbleAnnotation(i * 10, (i * 10) + 10, Math.random() * 100, Math.random() * 100, 20, 5, 'Hello, world! ' + i, 1, Color.fromHex('#ff0000'), 'https://termer.net/', Color.fromHex('#ffffff'), Color.fromHex('#000000'), 0.1, 0, 0.2)
+			)
+		}
+
+		annotationPlayer.setAnnotations(annotations)
+
+		// annotationPlayer.overlay.appendChild(mkBtn())
 	</script>
 </body>
 </html>

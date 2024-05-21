@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "checkJs": true,
+    "target": "ES2015",
+    "noEmit": true,
+  },
+  "include": ["player.js", "src/**/*"],
+  "exclude": ["**/*.spec.ts"]
+}
